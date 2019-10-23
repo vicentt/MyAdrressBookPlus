@@ -17,19 +17,21 @@ namespace MyAddressBookPlus.Controllers
         {
             var contactService = new ContactService();
 
-            //var contacts = contactService.GetContacts();
+            //contactService.CreateTable();
 
-            //var viewModel = contacts.Select(c => new Contact()
-            //{
-            //    Id = c.Id,
-            //    Name = c.Name,
-            //    Phone = c.Phone,
-            //    Email = c.Email,
-            //    Address = c.Address
-            //});
+            var contacts = contactService.GetContacts();
 
-            //return View(viewModel);
-            return View();
+            var viewModel = contacts.Select(c => new Contact()
+            {
+                Id = c.Id,
+                Name = c.Name,
+                Phone = c.Phone,
+                Email = c.Email,
+                Address = c.Address
+            });
+
+            return View(viewModel);
+            //return View();
         }
 
         /// <summary>

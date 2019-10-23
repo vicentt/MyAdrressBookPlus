@@ -96,5 +96,12 @@ namespace MyAddressBookPlus.Services
 
             return success;
         }
+
+
+        public void CreateTable()
+        {
+            var contactRepository = new ContactRepository();
+            //contactRepository.CreateTable();
+        }
     }
 }

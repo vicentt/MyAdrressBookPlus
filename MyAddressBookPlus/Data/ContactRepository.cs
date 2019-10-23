@@ -18,6 +18,13 @@ namespace MyAddressBookPlus.Data
             db = new SqlConnection(connectionstring);
         }
 
+        public void CreateTable()
+        {
+            var sql = $"DROP TABLE Contact; CREATE TABLE Contact (id int, Name varchar(255),Email varchar(255),Phone varchar(255),Address varchar(255),PictureName varchar(255));";
+            this.db.Query(sql);
+        }
+
+
         public int AddContact(Contact contact)
         {
             var sql = "INSERT INTO dbo.[Contact] ([Name] ,[Email] ,[Phone] ,[Address] ,[PictureName]) VALUES" +
