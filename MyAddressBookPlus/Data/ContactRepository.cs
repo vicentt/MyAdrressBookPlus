@@ -20,7 +20,7 @@ namespace MyAddressBookPlus.Data
 
         public void CreateTable()
         {
-            var sql = $"DROP TABLE Contact; CREATE TABLE Contact (id int, Name varchar(255),Email varchar(255),Phone varchar(255),Address varchar(255),PictureName varchar(255));";
+            var sql = $"CREATE TABLE Contact (id INT NOT NULL IDENTITY PRIMARY KEY, Name varchar(255),Email varchar(255),Phone varchar(255),Address varchar(255),PictureName varchar(255));";
             this.db.Query(sql);
         }
 

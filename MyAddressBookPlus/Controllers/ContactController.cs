@@ -17,7 +17,7 @@ namespace MyAddressBookPlus.Controllers
         {
             var contactService = new ContactService();
 
-            //contactService.CreateTable();
+           // contactService.CreateTable();
 
             var contacts = contactService.GetContacts();
 

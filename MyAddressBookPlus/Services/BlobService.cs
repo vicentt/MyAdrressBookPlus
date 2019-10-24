@@ -22,7 +22,7 @@ namespace MyAddressBookPlus.Services
                 CloudBlobClient cloudBlobClient = storageAccount.CreateCloudBlobClient();
 
                 // Create a container called 'photos' if not exist
-                var cloudBlobContainer = cloudBlobClient.GetContainerReference("myaddressbookplus");
+                var cloudBlobContainer = cloudBlobClient.GetContainerReference("photos");
                 cloudBlobContainer.CreateIfNotExists();
 
                 // Set the permissions so the blobs are public. 
